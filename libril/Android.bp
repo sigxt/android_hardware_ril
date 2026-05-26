@@ -47,10 +47,18 @@ cc_library_shared {
         "libhardware_legacy",
         "libhidlbase",
         "liblog",
-        "librilutils",
         "libutils",
     ],
-    static_libs: ["libprotobuf-c-nano-enable_malloc-32bit"],
+
+    export_static_lib_headers: [
+        "librilutils",
+    ],
+
+static_libs: [
+    "libprotobuf-c-nano-enable_malloc-32bit",
+    "librilutils",
+],
+
     cflags: [
         "-Wall",
         "-Wextra",

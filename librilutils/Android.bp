@@ -21,6 +21,18 @@ cc_library {
     header_libs: ["ril_headers"],
     export_header_lib_headers: ["ril_headers"],
 
+    export_include_dirs: [
+        ".",
+    ],
+
+    static_libs: [
+        "libprotobuf-c-nano",
+    ],
+
+    export_static_lib_headers: [
+        "libprotobuf-c-nano",
+    ],
+
     cflags: [
         "-Wall",
         "-Wextra",
